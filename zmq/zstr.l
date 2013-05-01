@@ -1,12 +1,12 @@
 
-(de zstr-recv (socket)
-   (native "libczmq.so" "zstr_recv" 'S socket) )
+(de zstr-recv (Socket)
+   (native "libczmq.so" "zstr_recv" 'S Socket) )
 
-(de zstr-recv-nowait (socket)
-   (native "libczmq.so" "zstr_recv_nowait" 'S socket) )
+(de zstr-recv-nowait (Socket)
+   (native "libczmq.so" "zstr_recv_nowait" 'S Socket) )
 
-(de zstr-send (socket str)
-   (native "libczmq.so" "zstr_send" 'I socket str) )
+(de zstr-send (Socket Str)
+   (native "libczmq.so" "zstr_send" 'I Socket Str) )
 
-(de zstr-sendm (socket str)
-   (native "libczmq.so" "zstr_sendm" 'I socket str) )
+(de zstr-sendm (Socket Str)
+   (native "libczmq.so" "zstr_sendm" 'I Socket Str) )

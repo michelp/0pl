@@ -1,52 +1,52 @@
 
-(de zframe-new (data size)
-   (native "libczmq.so" "zframe_new" 'N data size) )
+(de zframe-new (Data Size)
+   (native "libczmq.so" "zframe_new" 'N Data Size) )
 
-(de zframe-new-zero-copy (data size fn arg)
-   (native "libczmq.so" "zframe_new_zero_copy" 'N data size fn arg) )
+(de zframe-new-zero-copy (Data Size Fn Arg)
+   (native "libczmq.so" "zframe_new_zero_copy" 'N Data Size Fn Arg) )
 
-(de zframe-destroy (self)
-   (native "libczmq.so" "zframe_destroy" NIL self) )
+(de zframe-destroy (Self)
+   (native "libczmq.so" "zframe_destroy" NIL NIL (list NIL (8) (cons Self 8))) )
 
-(de zframe-recv (socket)
-   (native "libczmq.so" "zframe_recv" 'N socket) )
+(de zframe-recv (Socket)
+   (native "libczmq.so" "zframe_recv" 'N Socket) )
 
-(de zframe-recv-nowait (socket)
-   (native "libczmq.so" "zframe_recv_nowait" 'N socket) )
+(de zframe-recv-nowait (Socket)
+   (native "libczmq.so" "zframe_recv_nowait" 'N Socket) )
 
-(de zframe-send (self socket flags)
-   (native "libczmq.so" "zframe_send" 'I self socket flags) )
+(de zframe-send (Self Socket Flags)
+   (native "libczmq.so" "zframe_send" 'I Self Socket Flags) )
 
-(de zframe-size (self)
-   (native "libczmq.so" "zframe_size" 'I self) )
+(de zframe-size (Self)
+   (native "libczmq.so" "zframe_size" 'I Self) )
 
-(de zframe-data (self)
-   (native "libczmq.so" "zframe_data" 'N self) )
+(de zframe-data (Self)
+   (native "libczmq.so" "zframe_data" 'N Self) )
 
-(de zframe-dup (self)
-   (native "libczmq.so" "zframe_dup" 'N self) )
+(de zframe-dup (Self)
+   (native "libczmq.so" "zframe_dup" 'N Self) )
 
-(de zframe-strhex (self)
-   (native "libczmq.so" "zframe_strhex" 'S self) )
+(de zframe-strhex (Self)
+   (native "libczmq.so" "zframe_strhex" 'S Self) )
 
-(de zframe-strdup (self)
-   (native "libczmq.so" "zframe_strdup" 'S self) )
+(de zframe-strdup (Self)
+   (native "libczmq.so" "zframe_strdup" 'S Self) )
 
-(de zframe-streq (self str)
-   (native "libczmq.so" "zframe_streq" 'I self str) )
+(de zframe-streq (Self Str)
+   (native "libczmq.so" "zframe_streq" 'I Self Str) )
 
-(de zframe-zero-copy (self)
-   (native "libczmq.so" "zframe_zero_copy" 'I self) )
+(de zframe-zero-copy (Self)
+   (native "libczmq.so" "zframe_zero_copy" 'I Self) )
 
-(de zframe-more (self)
-   (native "libczmq.so" "zframe_more" 'I self) )
+(de zframe-more (Self)
+   (native "libczmq.so" "zframe_more" 'I Self) )
 
-(de zframe-eq (self other)
-   (native "libczmq.so" "zframe_eq" 'I self other) )
+(de zframe-eq (Self Other)
+   (native "libczmq.so" "zframe_eq" 'I Self Other) )
 
-(de zframe-print (self prefix)
-   (native "libczmq.so" "zframe_print" NIL self prefix) )
+(de zframe-print (Self Prefix)
+   (native "libczmq.so" "zframe_print" NIL Self Prefix) )
 
-(de zframe-reset (self data size)
-   (native "libczmq.so" "zframe_reset" NIL self data dize) )
+(de zframe-reset (Self Data Size)
+   (native "libczmq.so" "zframe_reset" NIL Self Data Dize) )
 

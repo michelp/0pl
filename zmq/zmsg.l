@@ -2,65 +2,65 @@
 (de zmsg-new ()
    (native "libczmq.so" "zmsg_new" 'N) )
 
-(de zmsg-destroy (self)
-   (native "libczmq.so" "zmsg_destroy" NIL self) )
+(de zmsg-destroy (Self)
+   (native "libczmq.so" "zmsg_destroy" NIL NIL (list NIL (8) (cons Self 8))) )
 
-(de zmsg-recv (socket)
-   (native "libczmq.so" "zmsg_recv" 'N socket) )
+(de zmsg-recv (Socket)
+   (native "libczmq.so" "zmsg_recv" 'N Socket) )
 
-(de zmsg-send (self socket)
-   (native "libczmq.so" "zmsg_send" 'I self socket) )
+(de zmsg-send (Self Socket)
+   (native "libczmq.so" "zmsg_send" 'I Self Socket) )
 
-(de zmsg-size (self)
-   (native "libczmq.so" "zmsg_size" 'I self) )
+(de zmsg-size (Self)
+   (native "libczmq.so" "zmsg_size" 'I Self) )
 
-(de zmsg-content-size (self)
-   (native "libczmq.so" "zmsg_content_size" 'I self) )
+(de zmsg-content-size (Self)
+   (native "libczmq.so" "zmsg_content_size" 'I Self) )
    
-(de zmsg-push (self frame)
-   (native "libczmq.so" "zmsg_push" 'I self frame) )
+(de zmsg-push (Self Frame)
+   (native "libczmq.so" "zmsg_push" 'I Self Frame) )
 
-(de zmsg-pop (self)
-   (native "libczmq.so" "zmsg_pop" 'N self) )
+(de zmsg-pop (Self)
+   (native "libczmq.so" "zmsg_pop" 'N Self) )
 
-(de zmsg-add (self frame)
-   (native "libczmq.so" "zmsg_add" 'I self frame) )
+(de zmsg-add (Self Frame)
+   (native "libczmq.so" "zmsg_add" 'I Self Frame) )
 
-(de zmsg-pushstr (self str)
-   (native "libczmq.so" "zmsg_pushstr" 'I self str) )
+(de zmsg-pushstr (Self Str)
+   (native "libczmq.so" "zmsg_pushstr" 'I Self Str) )
 
-(de zmsg-addstr (self str)
-   (native "libczmq.so" "zmsg_addstr" 'I self str) )
+(de zmsg-addstr (Self Str)
+   (native "libczmq.so" "zmsg_addstr" 'I Self Str) )
    
-(de zmsg-popstr (self)
-   (native "libczmq.so" "zmsg_popstr" 'S self) )
+(de zmsg-popstr (Self)
+   (native "libczmq.so" "zmsg_popstr" 'S Self) )
 
-(de zmsg-wrap (self frame)
-   (native "libczmq.so" "zmsg_wrap" NIL self frame) )
+(de zmsg-wrap (Self Frame)
+   (native "libczmq.so" "zmsg_wrap" NIL Self Frame) )
 
-(de zmsg-unwrap (self)
-   (native "libczmq.so" "zmsg_unwrap" 'N self) )
+(de zmsg-unwrap (Self)
+   (native "libczmq.so" "zmsg_unwrap" 'N Self) )
 
-(de zmsg-remove (self frame)
-   (native "libczmq.so" "zmsg_remove" NIL self frame) )
+(de zmsg-remove (Self Frame)
+   (native "libczmq.so" "zmsg_remove" NIL Self Frame) )
 
-(de zmsg-first (self)
-   (native "libczmq.so" "zmsg_first" 'N self) )
+(de zmsg-first (Self)
+   (native "libczmq.so" "zmsg_first" 'N Self) )
 
-(de zmsg-next (self)
-   (native "libczmq.so" "zmsg_next" 'N self) )
+(de zmsg-next (Self)
+   (native "libczmq.so" "zmsg_next" 'N Self) )
 
-(de zmsg-last (self)
-   (native "libczmq.so" "zmsg_last" 'N self) )
+(de zmsg-last (Self)
+   (native "libczmq.so" "zmsg_last" 'N Self) )
 
-(de zmsg-save (self file)
-   (native "libczmq.so" "zmsg_save" 'I self file) )
+(de zmsg-save (Self File)
+   (native "libczmq.so" "zmsg_save" 'I Self File) )
 
-(de zmsg-load (self file)
-   (native "libczmq.so" "zmsg_load" 'N self file) )
+(de zmsg-load (Self File)
+   (native "libczmq.so" "zmsg_load" 'N Self File) )
 
-(de zmsg-dup (self)
-   (native "libczmq.so" "zmsg_dup" 'N self) )
+(de zmsg-dup (Self)
+   (native "libczmq.so" "zmsg_dup" 'N Self) )
 
-(de zmsg-dump (self)
-   (native "libczmq.so" "zmsg_dump" NIL self) )
+(de zmsg-dump (Self)
+   (native "libczmq.so" "zmsg_dump" NIL Self) )

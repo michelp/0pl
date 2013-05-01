@@ -2,23 +2,23 @@
 (de zloop-new ()
    (native "libczmq.so" "zloop_new" 'N) )
 
-(de zloop-destroy (self)
-   (native "libczmq.so" "zloop_destroy" 'N self) )
+(de zloop-destroy (Self)
+   (native "libczmq.so" "zloop_destroy" NIL NIL (list NIL (8) (cons Self 8))) )
 
-(de zloop-poller (self item fn arg)
-   (native "libczmq.so" "zloop_poller" 'I self item fn arg) )
+(de zloop-poller (Self Item Fn Arg)
+   (native "libczmq.so" "zloop_poller" 'I Self Item Fn Arg) )
 
-(de zloop-poller-end (self item)
-   (native "libczmq.so" "zloop_poller_end" NIL self item) )
+(de zloop-poller-end (Self Item)
+   (native "libczmq.so" "zloop_poller_end" NIL Self Item) )
 
-(de zloop-timer (self delay times fn arg)
-   (native "libczmq.so" "zloop_timer" 'I self delay times fn arg) )
+(de zloop-timer (Self Delay Times Fn Arg)
+   (native "libczmq.so" "zloop_timer" 'I Self Delay Times Fn Arg) )
 
-(de zloop-timer-end (self arg)
-   (native "libczmq.so" "zloop_timer_end" 'I self arg) )
+(de zloop-timer-end (Self Arg)
+   (native "libczmq.so" "zloop_timer_end" 'I Self Arg) )
 
-(de zloop-set-verbose (self verbose)
-   (native "libczmq.so" "zloop_set_verbose" NIL self verbose) )
+(de zloop-set-verbose (Self Verbose)
+   (native "libczmq.so" "zloop_set_verbose" NIL Self Verbose) )
 
-(de zloop-start (self)
-   (native "libczmq.so" "zloop_start" 'I self) )
+(de zloop-start (Self)
+   (native "libczmq.so" "zloop_start" 'I Self) )

@@ -2,44 +2,44 @@
 (de zhash-new ()
    (native "libczmq.so" "zhash_new" 'N) )
 
-(de zhash-destroy (ctx)
-   (native "libczmq.so" "zhash_destroy" NIL ctx) )
+(de zhash-destroy (Self)
+   (native "libczmq.so" "zhash_destroy" NIL NIL (list NIL (8) (cons Self 8))) )
 
-(de zhash-insert (self key item)
-   (native "libczmq.so" "zhash_insert" 'I self key item) )
+(de zhash-insert (Self Key Item)
+   (native "libczmq.so" "zhash_insert" 'I Self Key Item) )
 
-(de zhash-update (self key item)
-   (native "libczmq.so" "zhash_update" 'N self key item) )
+(de zhash-update (Self Key Item)
+   (native "libczmq.so" "zhash_update" 'N Self Key Item) )
 
-(de zhash-delete (self key)
-   (native "libczmq.so" "zhash_delete" 'N self key) )
+(de zhash-delete (Self Key)
+   (native "libczmq.so" "zhash_delete" 'N Self Key) )
 
-(de zhash-lookup (self key)
-   (native "libczmq.so" "zhash_lookup" 'N self key) )
+(de zhash-lookup (Self Key)
+   (native "libczmq.so" "zhash_lookup" 'N Self Key) )
 
-(de zhash-rename (self old new)
-   (native "libczmq.so" "zhash_rename" 'I self old new) )
+(de zhash-rename (Self Old New)
+   (native "libczmq.so" "zhash_rename" 'I Self Old New) )
 
-(de zhash-freefn (self key fn)
-   (native "libczmq.so" "zhash_freefn" 'N self key fn) )
+(de zhash-freefn (Self Key Fn)
+   (native "libczmq.so" "zhash_freefn" 'N Self Key Fn) )
 
-(de zhash-size (self)
-   (native "libczmq.so" "zhash-size" 'I self) )
+(de zhash-size (Self)
+   (native "libczmq.so" "zhash-size" 'I Self) )
 
-(de zhash-dup (self)
-   (native "libczmq.so" "zhash-dup" 'N self) )
+(de zhash-dup (Self)
+   (native "libczmq.so" "zhash-dup" 'N Self) )
 
-(de zhash-keys (self)
-   (native "libczmq.so" "zhash_keys" 'N self) )
+(de zhash-Keys (Self)
+   (native "libczmq.so" "zhash_Keys" 'N Self) )
     
-(de zhash-foreach (self fn arg)
-   (native "libczmq.so" "zhash_foreach" 'I self fn arg) )
+(de zhash-foreach (Self Fn Arg)
+   (native "libczmq.so" "zhash_foreach" 'I Self Fn Arg) )
 
-(de zhash-save (self filename)
-   (native "libczmq.so" "zhash_save" 'I self filename) )
+(de zhash-save (Self Filename)
+   (native "libczmq.so" "zhash_save" 'I Self Filename) )
 
-(de zhash-load (self filename)
-   (native "libczmq.so" "zhash_load" 'I self filename) )
+(de zhash-load (Self Filename)
+   (native "libczmq.so" "zhash_load" 'I Self Filename) )
 
-(de zhash-autofree (self)
-   (native "libczmq.so" "zhash_autofree" NIL self) )
+(de zhash-autofree (Self)
+   (native "libczmq.so" "zhash_autofree" NIL Self) )
