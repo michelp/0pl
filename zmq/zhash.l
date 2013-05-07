@@ -24,16 +24,16 @@
    (native "libczmq.so" "zhash_freefn" 'N Self Key Fn) )
 
 (de zhash-size (Self)
-   (native "libczmq.so" "zhash-size" 'I Self) )
+   (native "libczmq.so" "zhash_size" 'I Self) )
 
 (de zhash-dup (Self)
-   (native "libczmq.so" "zhash-dup" 'N Self) )
+   (native "libczmq.so" "zhash_dup" 'N Self) )
 
-(de zhash-Keys (Self)
-   (native "libczmq.so" "zhash_Keys" 'N Self) )
+(de zhash-keys (Self)
+   (native "libczmq.so" "zhash_keys" 'N Self) )
     
 (de zhash-foreach (Self Fn Arg)
-   (native "libczmq.so" "zhash_foreach" 'I Self Fn Arg) )
+   (native "libczmq.so" "zhash_foreach" 'I Self (lisp 'zhash-foreach Fn) Arg) )
 
 (de zhash-save (Self Filename)
    (native "libczmq.so" "zhash_save" 'I Self Filename) )

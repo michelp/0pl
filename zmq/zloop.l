@@ -5,8 +5,11 @@
 (de zloop-destroy (Self)
    (native "libczmq.so" "zloop_destroy" NIL NIL (list NIL (8) (cons Self 8))) )
 
-(de zloop-poller (Self Item Fn Arg)
-   (native "libczmq.so" "zloop_poller" 'I Self Item Fn Arg) )
+(de zloop-poller (Self Socket Fd Events Fn Arg)
+   (native "libczmq.so" "zloop_poller" 
+      'I Self 
+      (list NIL (16) (cons Socket 8) (cons Fd 4) (cons Events 2) 0 0)
+      Fn Arg ) )
 
 (de zloop-poller-end (Self Item)
    (native "libczmq.so" "zloop_poller_end" NIL Self Item) )

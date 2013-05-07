@@ -3,13 +3,13 @@
    (native "libczmq.so" "zmsg_new" 'N) )
 
 (de zmsg-destroy (Self)
-   (native "libczmq.so" "zmsg_destroy" NIL NIL (list NIL (8) (cons Self 8))) )
+   (native "libczmq.so" "zmsg_destroy" NIL (list NIL (8) (cons Self 8))) )
 
 (de zmsg-recv (Socket)
    (native "libczmq.so" "zmsg_recv" 'N Socket) )
 
 (de zmsg-send (Self Socket)
-   (native "libczmq.so" "zmsg_send" 'I Self Socket) )
+   (native "libczmq.so" "zmsg_send" 'I (list NIL (8) (cons Self 8)) Socket) )
 
 (de zmsg-size (Self)
    (native "libczmq.so" "zmsg_size" 'I Self) )
